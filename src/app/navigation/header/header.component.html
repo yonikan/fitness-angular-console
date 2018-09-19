@@ -1,0 +1,180 @@
+
+<div class="header mat-elevation-z4">
+    <div class="hamburger-menu">
+        <button mat-button class="logo" (click)="onToggleSidenav()">
+          <mat-icon >menu</mat-icon>
+        </button>
+    </div>
+
+    <div class="navigation">
+
+        <button mat-button class="logo" routerLink="/welcome" >
+            <img src="./assets/img/logo.png">
+            <h1>GYMO</h1>
+        </button>
+
+        <div class="desktop-nav" fxHide.xs>
+
+            <!-- <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+                <li *ngIf="!isAuth">
+                  <button mat-button class="" routerLink="/signup" routerLinkActive="active">
+                    <a >Signup</a>
+                  </button>
+                </li>
+
+                <li *ngIf="!isAuth">
+                  <button mat-button class="" routerLink="/login" routerLinkActive="active">
+                    <a >Login</a>
+                  </button>
+                </li>
+
+                <li *ngIf="isAuth">
+                  <button mat-button class="" routerLink="/training" routerLinkActive="active">
+                    <a >Training</a>
+                  </button>
+                </li>
+
+                <li *ngIf="isAuth">
+                    <button mat-button class="" routerLink="/workouts" routerLinkActive="active">
+                      <a>Workouts</a>
+                    </button>
+                </li>
+
+                <li *ngIf="isAuth">
+                  <button mat-button class="" routerLink="/dashboard" routerLinkActive="active">
+                    <a>Dashboard</a>
+                  </button>
+                </li>
+
+                <li *ngIf="isAuth">
+                  <button mat-button class="" routerLink="/all-in-one-table" routerLinkActive="active">
+                    <a>all-in-one-table</a>
+                  </button>
+                </li>
+              </ul> -->
+
+          <!-- <button mat-button routerLinkActive="active" routerLink="/home">
+            <mat-icon>home</mat-icon>
+            <a>Home</a>
+          </button>
+
+          <button mat-button routerLinkActive="active" routerLink="/workout">
+            <i class="material-icons">dashboard</i>
+            <a>Workout</a>
+          </button>
+
+          <button mat-button routerLinkActive="active" routerLink="/dashboard">
+            <i class="material-icons">dashboard</i>
+            <a>Dashboard</a>
+          </button>
+
+          <button mat-button routerLinkActive="active" routerLink="/past">
+            <i class="material-icons">dashboard</i>
+            <a>Past</a>
+          </button>
+
+          <button mat-button routerLinkActive="active" routerLink="/exrecises">
+            <i class="material-icons">dashboard</i>
+            <a>Exrecises</a>
+          </button> -->
+        </div>
+    </div>
+
+    <div class="actions">
+          <button class="navigation-mobile-trigger2" mat-button [matMenuTriggerFor]="menu6">
+              <img class="avatar" src="../assets/img/profile-sm.jpg">
+          </button>
+          <mat-menu #menu6="matMenu">
+              <button mat-menu-item routerLink="/settings">
+                  <mat-icon>settings</mat-icon>
+                  <span>Settings</span>
+              </button>
+              <mat-divider></mat-divider>
+              <button mat-menu-item (click)="onLogout()">
+                  <mat-icon>exit_to_app</mat-icon>
+                  <span>Logout</span>
+              </button>
+          </mat-menu>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- ========================================================= -->
+
+<!-- <mat-toolbar color="primary" class="mat-elevation-z3">
+
+  <div fxHide.gt-xs>
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
+  <div>
+    <button mat-button class="logo" routerLink="/welcome" routerLinkActive="active">
+      <img src="./assets/img/logo.png">
+      <h1>GYMO</h1>
+    </button>
+  </div>
+
+  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+      <li *ngIf="!isAuth">
+        <button mat-button class="" routerLink="/signup" routerLinkActive="active">
+          <a >Signup</a>
+        </button>
+      </li>
+
+      <li *ngIf="!isAuth">
+        <button mat-button class="" routerLink="/login" routerLinkActive="active">
+          <a >Login</a>
+        </button>
+      </li>
+
+      <li *ngIf="isAuth">
+        <button mat-button class="" routerLink="/training" routerLinkActive="active">
+          <a >Training</a>
+        </button>
+      </li>
+
+      <li *ngIf="isAuth">
+          <button mat-button class="" routerLink="/workouts" routerLinkActive="active">
+            <a>Workouts</a>
+          </button>
+      </li>
+
+      <li *ngIf="isAuth">
+        <button mat-button class="" routerLink="/dashboard" routerLinkActive="active">
+          <a>Dashboard</a>
+        </button>
+      </li>
+
+      <li *ngIf="isAuth">
+        <button mat-button class="" routerLink="/all-in-one-table" routerLinkActive="active">
+          <a>all-in-one-table</a>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+    <div *ngIf="isAuth" >
+      <button mat-button class="" [matMenuTriggerFor]="menu6">
+        <img class="avatar" src="../assets/img/profile-sm.jpg">
+      </button>
+      <mat-menu #menu6="matMenu">
+        <button mat-menu-item routerLink="/settings">
+            <mat-icon>settings</mat-icon>
+            <span>Settings</span>
+        </button>
+        <mat-divider></mat-divider>
+        <button mat-menu-item (click)="onLogout()">
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Logout</span>
+        </button>
+    </mat-menu>
+  </div>
+</mat-toolbar> -->

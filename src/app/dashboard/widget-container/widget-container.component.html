@@ -1,0 +1,39 @@
+<mat-card fxFlex.xs="100%" fxFlex="550px">
+
+  <div >
+      <!-- <mat-card-title fxLayoutAlign="center">{{ widgetTitle }}</mat-card-title> -->
+
+      <mat-card-header #widgetHeader ng-class="'selected': true">
+        <span class="">
+            <mat-card-title>testtt</mat-card-title>
+        </span>
+        <span class="widgets-actions" >
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                 <mat-icon>more_vert</mat-icon>
+            </button>
+
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="null">
+                    <mat-icon>mode_edit</mat-icon>
+                    <span>Edit Widget</span>
+                </button>
+
+                <mat-divider></mat-divider>
+
+                <button mat-menu-item (click)="null">
+                    <mat-icon>delete</mat-icon>
+                    <span>Delete Widget</span>
+                </button>
+            </mat-menu>
+        </span>
+      </mat-card-header>
+
+      <mat-card-content fxLayoutAlign="center">
+        <div *ngIf="!isLoading">
+          <app-line-chart-widget [widgetDataObj]="widgetData"></app-line-chart-widget>
+        </div>
+        <!-- <mat-spinner *ngIf="isLoading"></mat-spinner> -->
+      </mat-card-content>
+  </div>
+
+</mat-card>

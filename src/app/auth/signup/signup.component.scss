@@ -1,0 +1,17 @@
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+  padding-top: 30px;
+
+  mat-form-field {
+    padding-bottom: 30px;
+  }
+
+  button {
+    margin-top: 20px;
+  }
+}

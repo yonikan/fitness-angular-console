@@ -1,0 +1,255 @@
+
+
+.header {
+  background-color: #4b52cf;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  // position: sticky;
+  // top: 0px;
+
+  @media screen and (max-width: 599px) {
+    justify-content: space-between;
+  }
+
+  button {
+    min-height: 57px;
+  }
+
+  .hamburger-menu {
+    // width: 50px;
+    display: flex;
+    align-items: center;
+    // background-color: aqua;
+    // margin: 0 auto;
+
+    mat-icon {
+      margin: 0 auto;
+    }
+  }
+
+  .navigation {
+
+    .active {
+      // border-bottom: 2px solid $primary;
+      background-color: rgba(3, 3, 3, 0.2);
+      // padding-bottom: 10px;
+      color: #fff;
+      // padding: 10px 0 ;
+    }
+
+    .logo {
+
+      img {
+        height: 35px;
+      }
+
+      h1 {
+        display: inline-block;
+        font-size: 19px;
+        color: white;
+        font-weight: 600;
+        // top: 13px;
+        // position: absolute;
+      }
+    }
+
+    .desktop-nav {
+      display: inline-block;
+    }
+  }
+
+  .actions {
+    margin-left: auto;
+    display: flex;
+
+    @media screen and (max-width: 599px) {
+      justify-content: space-between;
+      margin-left: 0;
+    }
+
+    .toolbar-button {
+      height: 100%;
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .icon-button {
+          height: 100%;
+          padding: 0;
+          min-width: 50px;
+
+          mat-icon {
+
+            .mat-badge-content {
+              color: #fff;
+            }
+          }
+      }
+
+      .dropdown {
+          background: white;
+          position: absolute;
+          top: 50px;
+          right: 0;
+          min-width: 350px;
+          z-index: -1;
+          transform: translateY(-110%) scale(0);
+          transform-origin: top right;
+          visibility: hidden;
+          transition: transform .4s cubic-bezier(.25,.8,.25,1), visibility .4s cubic-bezier(.25,.8,.25,1);
+
+          // @media screen and (max-width: 599px) {
+          // min-width: 100vw;
+          // right: -147px; // width of user-button + quickpanel-button
+          // }
+
+          &.open {
+              transform: translateY(0) scale(1);
+              visibility: visible;
+          }
+      }
+
+      @media only screen and (max-width: 500px) {
+        display: none;
+      }
+    }
+
+    .avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  }
+}
+
+
+
+
+// ================================================
+
+
+// mat-toolbar {
+//   position: fixed;
+//   top: 0;
+//   z-index: 20;
+//   // width: 1200px;
+
+//   button {
+//     height: 65px;
+//   }
+// }
+
+// .logo {
+
+//   img {
+//     height: 35px;
+//   }
+
+//   h1 {
+//     display: inline-block;
+//     font-size: 19px;
+//     color: white;
+//     font-weight: 600;
+//     // top: 13px;
+//     // position: absolute;
+//   }
+// }
+
+
+// .navigation-items {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+
+//   .active {
+//     // border-bottom: 2px solid $primary;
+//     background-color: rgba(3, 3, 3, 0.2);
+//     // padding-bottom: 10px;
+//     color: red;
+//     // padding: 10px 0 ;
+//   }
+
+//   a {
+//     text-decoration: none;
+//     color: white;
+//     font-size: 18px;
+//   }
+// }
+
+// .nav-caption {
+//   display: inline-block;
+//   padding-left: 6px;
+// }
+
+
+
+
+
+
+
+.toolbar-button {
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .icon-button {
+      height: 100%;
+      padding: 0;
+      min-width: 50px;
+
+      mat-icon {
+
+        .mat-badge-content {
+          color: #fff;
+        }
+      }
+  }
+
+  .dropdown {
+      background: white;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      min-width: 350px;
+      z-index: 1;
+      // z-index: 2 !important;
+      transform: translateY(-110%) scale(0);
+      transform-origin: top right;
+      visibility: hidden;
+      transition: transform .4s cubic-bezier(.25,.8,.25,1), visibility .4s cubic-bezier(.25,.8,.25,1);
+
+      // @media screen and (max-width: 599px) {
+      // min-width: 100vw;
+      // right: -147px; // width of user-button + quickpanel-button
+      // }
+
+      &.open {
+          transform: translateY(0) scale(1);
+          visibility: visible;
+      }
+  }
+
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
+}
+
+
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+
+@media only screen and (max-width: 500px) {
+
+}
